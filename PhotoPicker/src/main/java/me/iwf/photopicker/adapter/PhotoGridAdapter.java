@@ -45,7 +45,7 @@ public class PhotoGridAdapter extends SelectableAdapter<RecyclerView.ViewHolder>
         this.mContext = mContext;
 
         inflater = LayoutInflater.from(mContext);
-        mImageSize = DeviceInfoUtils.getScreenWidth(mContext) / 3;
+        mImageSize = mContext.getResources().getDimensionPixelOffset(R.dimen.folder_cover_size);
     }
 
     @Override
@@ -126,7 +126,6 @@ public class PhotoGridAdapter extends SelectableAdapter<RecyclerView.ViewHolder>
 
         }
     }
-
 
     @Override
     public int getItemCount() {

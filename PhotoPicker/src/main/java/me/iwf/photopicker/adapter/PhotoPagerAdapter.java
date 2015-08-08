@@ -37,18 +37,6 @@ public class PhotoPagerAdapter extends PagerAdapter {
         mItemSize = DeviceInfoUtils.getScreenWidth(mContext);
     }
 
-    /**
-     * 重置每个Column的Size
-     *
-     * @param columnWidth
-     */
-    public void setItemSize(int columnWidth) {
-        if (mItemSize == columnWidth) {
-            return;
-        }
-        mItemSize = columnWidth;
-    }
-
     @Override
     public Object instantiateItem(ViewGroup container, int position) {
 
@@ -59,9 +47,6 @@ public class PhotoPagerAdapter extends PagerAdapter {
         final String path = paths.get(position);
         Picasso.with(mContext)
                 .load(new File(path))
-                .error(R.drawable.default_error)
-                .resize(mItemSize, mItemSize)
-                .centerCrop()
                 .into(imageView);
 
         imageView.setOnClickListener(new View.OnClickListener() {

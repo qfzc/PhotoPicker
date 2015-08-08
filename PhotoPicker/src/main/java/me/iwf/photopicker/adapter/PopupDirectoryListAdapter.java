@@ -85,7 +85,7 @@ public class PopupDirectoryListAdapter extends BaseAdapter {
 
         public void bindData(PhotoDirectory directory) {
             Picasso.with(context)
-                    .load(directory.getCoverPath())
+                    .load(new File(directory.getCoverPath()))
                     .placeholder(R.drawable.default_error)
                     .error(R.drawable.default_error)
                     .resize(mImageSize, mImageSize)
