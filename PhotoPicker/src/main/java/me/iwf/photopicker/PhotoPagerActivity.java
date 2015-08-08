@@ -42,7 +42,6 @@ public class PhotoPagerActivity extends AppCompatActivity {
 
     Toolbar mToolbar = (Toolbar) findViewById(R.id.toolbar);
     setSupportActionBar(mToolbar);
-
     actionBar = getSupportActionBar();
 
     actionBar.setDisplayHomeAsUpEnabled(true);
