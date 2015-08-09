@@ -18,7 +18,6 @@ import me.iwf.photopicker.entity.Photo;
 import me.iwf.photopicker.entity.PhotoDirectory;
 import me.iwf.photopicker.event.OnItemCheckListener;
 import me.iwf.photopicker.event.OnPhotoClickListener;
-import me.iwf.photopicker.utils.DeviceInfoUtils;
 import me.iwf.photopicker.utils.MediaStoreHelper;
 
 /**
@@ -87,12 +86,12 @@ public class PhotoGridAdapter extends SelectableAdapter<RecyclerView.ViewHolder>
             }
 
             PhotoViewHolder holder = (PhotoViewHolder) viewHolder;
-            Picasso.with(mContext)
-                    .load(new File(photo.getPath()))
-                    .error(R.drawable.default_error)
-                    .resize(mImageSize, mImageSize)
-                    .centerCrop()
-                    .into(holder.ivPhoto);
+//            Picasso.with(mContext)
+//                    .load(new File(photo.getPath()))
+//                    .error(R.drawable.default_error)
+//                    .resize(mImageSize, mImageSize)
+//                    .centerCrop()
+//                    .into(holder.ivPhoto);
 
             final boolean isChecked = isSelected(photo);
 

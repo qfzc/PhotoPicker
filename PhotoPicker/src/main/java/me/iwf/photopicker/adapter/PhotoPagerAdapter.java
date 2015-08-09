@@ -2,12 +2,10 @@ package me.iwf.photopicker.adapter;
 
 import android.app.Activity;
 import android.content.Context;
-import android.net.Uri;
 import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.ImageView;
 
 import com.squareup.picasso.Picasso;
@@ -18,7 +16,6 @@ import java.util.List;
 
 import me.iwf.photopicker.PhotoPickerActivity;
 import me.iwf.photopicker.R;
-import me.iwf.photopicker.utils.DeviceInfoUtils;
 
 /**
  * Created by donglua on 15/6/21.
@@ -34,7 +31,7 @@ public class PhotoPagerAdapter extends PagerAdapter {
         this.mContext = mContext;
         this.paths = paths;
         mLayoutInflater = LayoutInflater.from(mContext);
-        mItemSize = DeviceInfoUtils.getScreenWidth(mContext);
+        mItemSize = 200;
     }
 
     @Override
